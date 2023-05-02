@@ -1,17 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//Imports basiques React
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//Imports des pages
+import Home from './pages/home'
+import Accomodation from './pages/accomodation'
+import About from './pages/about'
+
+//Imports des composants
+import Header from './components/header'
+import Footer from './components/footer'
+import Error from './components/error'
+
+//Import du style
+import './style/header.css'
+import './style/index.css'
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+      <React.StrictMode>
+            <BrowserRouter>
+                  <Header />
+                  <Routes>
+                        <Route path="/" Component={Home}></Route>
+                        <Route
+                              path="/accomodation"
+                              Component={Accomodation}
+                        ></Route>
+                        <Route path="/about" Component={About}></Route>
+                        <Route path="*" Component={Error}></Route>
+                  </Routes>
+                  <Footer />
+            </BrowserRouter>
+      </React.StrictMode>
+)

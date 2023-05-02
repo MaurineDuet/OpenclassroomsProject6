@@ -1,0 +1,15 @@
+body {
+background-color: #FFFFFF;
+color: #FF6060;
+font-family: 'Montserrat';
+}
+
+ul {
+    list-style-type: none;
+}
+
+a, a:visited {
+    color: #FF6060;
+    text-decoration: none;
+}
+

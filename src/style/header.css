@@ -1,0 +1,19 @@
+.kasa-header {
+    background-color: white;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kasa-logo {
+    height: 50px;
+}
+
+.kasa-nav {
+    display: flex;
+    gap: 50px;
+}
+
+.kasa-li {
+    cursor: pointer;
+}
