@@ -24,13 +24,13 @@ root.render(
             <BrowserRouter>
                   <Header />
                   <Routes>
-                        <Route path="/" Component={Home}></Route>
+                        <Route path="/" element={<Home/>}></Route>
                         <Route
                               path="/accomodation"
-                              Component={Accomodation}
+                              element={<Accomodation/>}
                         ></Route>
-                        <Route path="/about" Component={About}></Route>
-                        <Route path="*" Component={Error}></Route>
+                        <Route path="/about" element={<About/>}></Route>
+                        <Route path="*" element={<Error/>}></Route>
                   </Routes>
                   <Footer />
             </BrowserRouter>

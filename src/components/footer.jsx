@@ -1,11 +1,13 @@
 // import { Link } from 'react-router-dom'
-import '../style/header.css'
+import '../style/footer.css'
+import FooterLogo from '../assets/footer_logo.svg'
 
 function Footer () {
     return(
-    <header className='kasa-header'>
-        <img src="../assets/logo.png" alt="" className='kasa-logo'/>          
-    </header>
+    <footer>
+        <img src={FooterLogo} alt="" className='kasa-logo-footer'/>   
+        <p className='credits'>© 2020 Kasa. All rights reserved</p>       
+    </footer>
     )
 }
 
