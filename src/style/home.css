@@ -29,9 +29,14 @@
 }
 
 .location-item { 
-    background: black;
-    padding: 120px 100px;
+    background: linear-gradient(180deg, rgba(255, 96, 96, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    width: 300px;
+    height: 300px;
     margin: 0px;
     border-radius: 10px;
 
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
 }

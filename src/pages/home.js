@@ -1,27 +1,16 @@
 import '../style/index.css'
 import '../style/home.css'
+import Banner from '../components/banner'
+import Card from '../components/card'
 
 function Home() {
       return (
             <div className="container">
 
-                  <h1 className="kasa-main-title">
-                        Chez vous, partout et ailleurs
-                  </h1>
+                  <Banner></Banner>
 
-                  <section className='kasa-main-content'>
-                        <figure className='location-item'>
-                        <p>Titre de la location</p>
-                        </figure>
+                  <Card></Card>
 
-                        <figure className='location-item'>
-                        <p>Titre de la location</p>
-                        </figure>
-
-                        <figure className='location-item'>
-                        <p>Titre de la location</p>
-                        </figure>
-                  </section>
             </div>
       )
 }
