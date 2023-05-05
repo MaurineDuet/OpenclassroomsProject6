@@ -7,11 +7,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import Accomodation from './pages/accomodation'
 import About from './pages/about'
+import Error from './pages/error'
 
 //Imports des composants
 import Header from './components/header'
 import Footer from './components/footer'
-import Error from './components/error'
 
 //Import du style
 import './style/header.css'
