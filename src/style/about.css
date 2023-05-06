@@ -1,0 +1,42 @@
+/* Banner */
+
+.kasa-main-title h1 {
+    display: none;
+}
+
+.kasa-main-title {
+    background-image:url("../assets/background_2.jpg") ;
+}
+
+/* Collapsible */
+
+.collapsible-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.collapsible h3 {
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+
+    font-size: 1.5em;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.collapsible p {
+    background-color: #F6F6F6;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 30px;
+    border-radius: 5px;
+}

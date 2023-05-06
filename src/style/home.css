@@ -8,11 +8,15 @@
     text-align: center;
 
     width: 100%;
-    padding: 80px;
+    height: 200px;
     border-radius: 25px;
 
     color: white;
     font-size: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .kasa-main-content {

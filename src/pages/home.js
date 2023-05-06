@@ -17,15 +17,11 @@ function Home() {
       return (
             <div className="container">
                   <Banner></Banner>
-                  
+
                   <section className="kasa-main-content">
-
                         {locationsList?.map((house, index) => (
-                              <Card 
-                              key={house.id} 
-                              title={house.title} />
+                              <Card key={house.id} title={house.title} />
                         ))}
-
                   </section>
             </div>
       )

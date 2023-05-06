@@ -3,8 +3,10 @@ import '../style/home.css'
 
 function Banner() {
       return (
-      <h1 className="kasa-main-title">Chez vous, partout et ailleurs</h1>
+      <div className="kasa-main-title">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
     )
 }
 
-export default Banner
+export default Banner 
