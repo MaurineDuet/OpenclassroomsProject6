@@ -6,9 +6,7 @@ import { useFetch } from '../hooks/fetch'
 
 function Home() {
       const { data, error } = useFetch('/logements.json')
-
       const locationsList = data
-      console.log(data)
 
       if (error) {
             return <span>Il y a un problème</span>
