@@ -18,11 +18,12 @@ function Home() {
 
                   <section className="kasa-main-content">
                         {locationsList?.map((house, index) => (
-                              <Card key={house.id} title={house.title} />
+                              <Card key={house.id} title={house.title} id={house.id} />
                         ))}
                   </section>
             </div>
       )
 }
+
 
 export default Home
