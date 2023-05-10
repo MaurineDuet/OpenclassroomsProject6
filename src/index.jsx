@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 //Imports des pages
 import Home from './pages/home'
-import Accomodation from './pages/accommodation'
+import Accommodation from './pages/accommodation'
 import About from './pages/about'
 import Error from './pages/error'
 
@@ -27,7 +27,7 @@ root.render(
                         <Route path="/" element={<Home/>}></Route>
                         <Route
                               path={"/accommodation/:id"}
-                              element={<Accomodation/>}
+                              element={<Accommodation/>}
                         ></Route>
                         <Route path="/about" element={<About/>}></Route>
                         <Route path="*" element={<Error/>}></Route>

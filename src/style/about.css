@@ -13,9 +13,13 @@
 .collapsible-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     gap: 30px;
     padding: 50px 0;
+}
+
+.collapsible {
+    flex-grow: 1;
 }
 
 .collapsible h3 {
@@ -31,6 +35,8 @@
     justify-content: space-between;
 
     cursor: pointer;
+
+    flex-basis: 100%;
 }
 
 .collapsible p {
@@ -39,4 +45,6 @@
     font-size: 1.2em;
     line-height: 30px;
     border-radius: 5px;
+    flex-basis: 100%
 }
+

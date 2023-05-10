@@ -32,23 +32,51 @@ function Accommodation() {
 
       return (
             <div className="container">
-                  <div className="collapsible-container-acc">
+                  <div className="container-acc">
                         <Slider selectedHome={selectedHome} />
 
-                        <Collapsible label="Description">
-                              <p className="collapsible-p">
-                                    {selectedHome.description}
-                              </p>
-                        </Collapsible>
-                        <Collapsible label="Equipements">
-                              <ul>
-                                    {selectedHome.equipments.map(
-                                          (equipment, index) => (
-                                                <li key={index}>{equipment}</li>
-                                          )
-                                    )}
+                        <section className='acc-up'>
+                              <div className="acc-header">
+                                    <div className="acc-title">
+                                          <h2>{selectedHome.title}</h2>
+                                          <p>{selectedHome.location}</p>
+                                    </div>
+
+                                    <div className="acc-host">
+                                          <p>{selectedHome.host.name}</p>
+                                          <img
+                                                src={selectedHome.host.picture}
+                                                alt="Host_picture"
+                                          />
+                                    </div>
+                              </div>
+
+                              <ul className="acc-tags">
+                                    {selectedHome.tags.map((tag, index) => (
+                                          <li key={index}>{tag}</li>
+                                    ))}
                               </ul>
-                        </Collapsible>
+                              <div></div>
+                        </section>
+
+                        <section className="acc-collapse-container">
+                              <Collapsible label="Description">
+                                    <p className="collapsible-p">
+                                          {selectedHome.description}
+                                    </p>
+                              </Collapsible>
+                              <Collapsible label="Equipements">
+                                    <ul>
+                                          {selectedHome.equipments.map(
+                                                (equipment, index) => (
+                                                      <li key={index}>
+                                                            {equipment}
+                                                      </li>
+                                                )
+                                          )}
+                                    </ul>
+                              </Collapsible>
+                        </section>
                   </div>
             </div>
       )
@@ -56,14 +84,13 @@ function Accommodation() {
 
 export default Accommodation
 
-                        /* <ul>
+/* <ul>
                               {selectedHome.pictures.map((picture, index) => (
                                     <li key={index}>
                                           <img src={picture} alt=''/>
                                     </li>
                               ))}
                         </ul> */
-
 
 // return (
 //       <div className="container">

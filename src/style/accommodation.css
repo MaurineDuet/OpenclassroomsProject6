@@ -1,4 +1,70 @@
-.collapsible-container-acc {
+
+/* General*/
+
+.container-acc {
     display: flex;
+    flex-direction: column;
     gap: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.container-acc h2 {
+    font-size: 2em;
+}
+
+.acc-up {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Acc header*/
+
+.acc-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acc-title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acc-host {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.acc-host p {
+    text-align: end;
+    line-height: 150%;
+    width: 100px;
+}
+
+.acc-host img {
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.acc-tags {
+    display: flex;
+    gap: 20px;
+}
+
+.acc-tags li {
+    background-color: #FF6060;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 15px;
+}
+
+/* Acc collapse */
+
+.acc-collapse-container {
+    display: flex;
+    gap: 30px;
 }

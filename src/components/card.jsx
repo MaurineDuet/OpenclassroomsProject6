@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Card({ title, id }) {
 
       return (
-            <Link to={`/accomodation/${id}`}>
+            <Link to={`/accommodation/${id}`}>
                   <figure className="location-item">
                         <p>{title}</p>
                   </figure>
