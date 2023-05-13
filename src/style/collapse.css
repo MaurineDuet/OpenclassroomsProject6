@@ -1,14 +1,4 @@
-/* Banner */
-
-.kasa-main-title h1 {
-    display: none;
-}
-
-.kasa-main-title {
-    background-image:url("../assets/background_2.jpg") ;
-}
-
-/* Collapsible */
+/* General */
 
 .collapsible-container {
     display: flex;
@@ -18,9 +8,12 @@
     padding: 50px 0;
 }
 
-.collapsible {
-    flex-grow: 1;
+.collapsible, .toggle {
+    flex: 1
 }
+
+/* Collapse title */
+
 
 .collapsible h3 {
     background-color: #FF6060;
@@ -35,16 +28,25 @@
     justify-content: space-between;
 
     cursor: pointer;
+}
 
-    flex-basis: 100%;
+/* Collapse content */
+
+.collapsible p, .collapsible ul {
+    background-color: #F6F6F6;
+    padding: 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
 }
 
 .collapsible p {
-    background-color: #F6F6F6;
-    padding: 20px;
-    font-size: 1.2em;
     line-height: 30px;
-    border-radius: 5px;
-    flex-basis: 100%
 }
 
+.collapsible ul {
+    flex-basis: 100%;
+}
+
+.collapsible li {
+    padding: 5px;
+}

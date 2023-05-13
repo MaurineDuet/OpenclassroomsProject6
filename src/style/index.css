@@ -1,13 +1,13 @@
 body {
-background-color: #FFFFFF;
-color: #FF6060;
-font-family: 'Montserrat';
+    background-color: #FFFFFF;
+    color: #FF6060;
+    font-family: 'Montserrat';
 
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-min-height: 100vh;
-font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-size: 1.1em;
 }
 
 ul {

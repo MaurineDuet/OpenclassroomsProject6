@@ -1,7 +1,10 @@
 import '../style/index.css'
 import '../style/accommodation.css'
+import '../style/collapse.css'
+
 import Collapsible from '../components/collapse'
 import Slider from '../components/slider'
+import StarRating from '../components/starRating'
 import { useFetch } from '../hooks/fetch'
 import { useParams } from 'react-router-dom'
 
@@ -19,7 +22,7 @@ function Accommodation() {
       }
 
       // Use the == operator to perform a more relaxed equality check
-      // eslint-disable-next-line eqeqeq
+      // eslint-disable-next-line
       const selectedHome = data.find((obj) => obj.id == id)
 
       // Log some helpful information for troubleshooting
@@ -35,7 +38,7 @@ function Accommodation() {
                   <div className="container-acc">
                         <Slider selectedHome={selectedHome} />
 
-                        <section className='acc-up'>
+                        <section className="acc-up">
                               <div className="acc-header">
                                     <div className="acc-title">
                                           <h2>{selectedHome.title}</h2>
@@ -51,12 +54,17 @@ function Accommodation() {
                                     </div>
                               </div>
 
-                              <ul className="acc-tags">
-                                    {selectedHome.tags.map((tag, index) => (
-                                          <li key={index}>{tag}</li>
-                                    ))}
-                              </ul>
-                              <div></div>
+                              <div className="acc-middle">
+                                    <ul className="acc-tags">
+                                          {selectedHome.tags.map(
+                                                (tag, index) => (
+                                                      <li key={index}>{tag}</li>
+                                                )
+                                          )}
+                                    </ul>
+
+                                    <StarRating rating={selectedHome.rating} />
+                              </div>
                         </section>
 
                         <section className="acc-collapse-container">

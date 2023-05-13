@@ -3,11 +3,12 @@ import '../style/home.css'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-function Card({ title, id }) {
+function Card({ title, id, cover }) {
 
       return (
             <Link to={`/accommodation/${id}`}>
                   <figure className="location-item">
+                        <img src={cover} alt="" />
                         <p>{title}</p>
                   </figure>
             </Link>

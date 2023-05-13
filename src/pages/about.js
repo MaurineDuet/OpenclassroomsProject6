@@ -1,12 +1,14 @@
 import '../style/index.css'
-import '../style/about.css'
+import '../style/collapse.css'
 import Banner from '../components/banner'
 import Collapsible from '../components/collapse'
 
 function About() {
       return (
             <div className="container">
-                  <Banner></Banner>
+                  <Banner
+                        backgroundImage="../assets/background_2.jpg"
+                  ></Banner>
 
                   <div className="collapsible-container">
 

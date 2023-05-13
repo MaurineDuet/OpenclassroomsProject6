@@ -14,16 +14,22 @@ function Home() {
 
       return (
             <div className="container">
-                  <Banner></Banner>
+                  <Banner
+                        title="Chez vous, partout et ailleurs"
+                        backgroundImage="../assets/background.jpg"/>
 
                   <section className="kasa-main-content">
                         {locationsList?.map((house, index) => (
-                              <Card key={house.id} title={house.title} id={house.id} />
+                              <Card
+                                    key={house.id}
+                                    title={house.title}
+                                    id={house.id}
+                                    cover={house.cover}
+                              />
                         ))}
                   </section>
             </div>
       )
 }
-
 
 export default Home

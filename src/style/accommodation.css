@@ -19,12 +19,14 @@
     gap: 20px;
 }
 
-/* Acc header*/
+/* Acc header (title, host, address, tags, stars)*/
 
 .acc-header {
     display: flex;
     justify-content: space-between;
 }
+
+/* Title (house title + host name) */
 
 .acc-title {
     display: flex;
@@ -50,6 +52,8 @@
     object-fit: cover;
 }
 
+/* Middle (tags + stars) */
+
 .acc-tags {
     display: flex;
     gap: 20px;
@@ -62,9 +66,20 @@
     border-radius: 15px;
 }
 
+.acc-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.star {
+padding: 0 7px;
+}
+
 /* Acc collapse */
 
 .acc-collapse-container {
     display: flex;
     gap: 30px;
 }
+
