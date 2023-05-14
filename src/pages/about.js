@@ -7,7 +7,7 @@ function About() {
       return (
             <div className="container">
                   <Banner
-                        backgroundImage="../assets/background_2.jpg"
+                        backgroundImage="./background_2.jpg"
                   ></Banner>
 
                   <div className="collapsible-container">

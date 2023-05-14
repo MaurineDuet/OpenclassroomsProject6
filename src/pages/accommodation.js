@@ -7,6 +7,7 @@ import Slider from '../components/slider'
 import StarRating from '../components/starRating'
 import { useFetch } from '../hooks/fetch'
 import { useParams } from 'react-router-dom'
+import Error from './error'
 
 function Accommodation() {
       const { id } = useParams()
@@ -30,7 +31,7 @@ function Accommodation() {
       // console.log('selectedHome:', selectedHome)
 
       if (!selectedHome) {
-            return <span>Aucun logement trouvé pour l'ID {id}</span>
+            return <Error/>
       }
 
       return (

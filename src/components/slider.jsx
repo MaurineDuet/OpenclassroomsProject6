@@ -8,25 +8,23 @@ function Slider({ selectedHome }) {
       const [current, setCurrent] = useState(0)
 
       const pictures = selectedHome.pictures || []
-      console.log(pictures)
       const length = pictures.length
-      console.log(length)
 
       const nextSlide = () => {
             if (current === length - 1) {
-              setCurrent(0)
+                  setCurrent(0)
             } else {
-              setCurrent(current + 1)
+                  setCurrent(current + 1)
             }
-          }
-        
-          const prevSlide = () => {
+      }
+
+      const prevSlide = () => {
             if (current === 0) {
-              setCurrent(length - 1)
+                  setCurrent(length - 1)
             } else {
-              setCurrent(current - 1)
+                  setCurrent(current - 1)
             }
-          }
+      }
 
       useEffect(() => {
             setCurrent(0)
@@ -34,20 +32,36 @@ function Slider({ selectedHome }) {
 
       return (
             <section className="slider">
-                  <img
-                        className="left-arrow"
-                        src={LeftArrow}
-                        alt="left-arrow"
-                        onClick={prevSlide}
-                  />
-                  <img
-                        className="right-arrow"
-                        src={RightArrow}
-                        alt="right-arrow"
-                        onClick={nextSlide}
-                  />
+                  {/* <div className="slider-nav"> */}
+                        <img
+                              className="left-arrow"
+                              src={LeftArrow}
+                              alt="left-arrow"
+                              onClick={prevSlide}
+                        />
+                        <div className="slider-counter">
+                              {current + 1} / {length}
+                        </div>
+                        <img
+                              className="right-arrow"
+                              src={RightArrow}
+                              alt="right-arrow"
+                              onClick={nextSlide}
+                        />
+                  {/* </div> */}
                   {pictures.map((picture, index) => {
-                        return <img key={index} src={picture} alt="" className={index === current ? "image active" : "image"} />
+                        return (
+                              <img
+                                    key={index}
+                                    src={picture}
+                                    alt=""
+                                    className={
+                                          index === current
+                                                ? 'slide active'
+                                                : 'slide'
+                                    }
+                              />
+                        )
                   })}
             </section>
       )
@@ -58,6 +72,7 @@ Slider.propTypes = {
 }
 
 export default Slider
+
 
 /* // function Slider({ currentApartmentIndex, id }) { */
 /* //       const { data, error } = useFetch(`/logements/${id}.json`)

@@ -16,7 +16,7 @@ function Home() {
             <div className="container">
                   <Banner
                         title="Chez vous, partout et ailleurs"
-                        backgroundImage="../assets/background.jpg"/>
+                        backgroundImage="./background.jpg"/>
 
                   <section className="kasa-main-content">
                         {locationsList?.map((house, index) => (
