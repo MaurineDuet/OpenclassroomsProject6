@@ -11,7 +11,7 @@
   top: 450px;
   left: calc(50% - 25px);
   height: 50px;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .slide {
@@ -58,4 +58,58 @@
 .right-arrow {
   right: 20px;
   background-size: cover;
+}
+
+/* Responsive petits écrans*/
+
+@media screen and (max-width:1400px) {
+
+  .slider {
+    height: 300px;
+  }
+
+  .slider-counter {
+    font-size: 1em;
+    top: 260px;
+    left: calc(50% - 25px);
+    height: 50px;
+    z-index: 2;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    transform: translateY(calc((300px / 2) - 20px));
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+/* Responsive telephone */
+
+@media screen and (max-width:999px) {
+
+  .slider {
+    height: 200px;
+  }
+
+  .slide-image, .slide {
+    border-radius: 10px;
+  }
+
+  .slider-counter {
+    top: 170px;
+    left: calc(50% - 20px);
+    height: 40px;
+    z-index: 2;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    transform: translateY(calc((200px / 2) - 15px));
+    width: 30px;
+    height: 30px;
+  }
+
+
 }

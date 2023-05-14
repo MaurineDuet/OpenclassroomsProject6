@@ -20,3 +20,28 @@ h2 {
     font-size: 1.1em;
     text-decoration: underline;
 }
+
+@media screen and (max-width:999px) {
+
+    .kasa-error {
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    h2 {
+        font-size: 100px;
+    }
+    
+    .kasa-error p {
+        font-size: 1.2em;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    
+    .error-button {
+        font-size: 1.1em;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+}

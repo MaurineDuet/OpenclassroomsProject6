@@ -47,7 +47,7 @@ function Accommodation() {
                                     </div>
 
                                     <div className="acc-host">
-                                          <p>{selectedHome.host.name}</p>
+                                          <p>{selectedHome.host.name.split(' ').join('\n')}</p>
                                           <img
                                                 src={selectedHome.host.picture}
                                                 alt="Host_picture"

@@ -50,3 +50,28 @@
 .collapsible li {
     padding: 5px;
 }
+
+@media screen and (max-width:1400px) {
+
+    .collapsible h3 {
+        font-size: 1.2em
+    }
+
+    .collapsible p, .collapsible ul {
+        font-size: 1em;
+    }
+    
+  }
+
+  @media screen and (max-width:999px) {
+
+    .collapsible h3 {
+        font-size: 1em
+    }
+
+    .collapsible-container {
+        padding: 0;
+        gap: 20px;
+    }
+
+  }

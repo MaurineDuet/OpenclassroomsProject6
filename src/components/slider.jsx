@@ -30,6 +30,16 @@ function Slider({ selectedHome }) {
             setCurrent(0)
       }, [])
 
+      if (length <= 1) {
+            return (
+              <section className="slider">
+                {pictures.map((picture, index) => (
+                  <img key={index} src={picture} alt="" className="slide active" />
+                ))}
+              </section>
+            );
+          }
+
       return (
             <section className="slider">
                   {/* <div className="slider-nav"> */}

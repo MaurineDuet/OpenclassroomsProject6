@@ -18,3 +18,20 @@
 .kasa-li {
     cursor: pointer;
 }
+
+@media screen and (max-width:999px) {
+
+    .kasa-header {
+        padding: 30px;
+    }
+    
+    .kasa-logo {
+        height: 30px;
+    }
+    
+    .kasa-nav {
+        gap: 15px;
+        font-size: 0.8em;
+    }
+    
+}
