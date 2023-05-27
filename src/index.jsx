@@ -19,18 +19,20 @@ import './style/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
+/* Mise en place des différentes routes accessibles */
+
 root.render(
       <React.StrictMode>
             <BrowserRouter>
                   <Header />
                   <Routes>
-                        <Route path="/" element={<Home/>}></Route>
+                        <Route path="/" element={<Home />}></Route>
                         <Route
-                              path={"/accommodation/:id"}
-                              element={<Accommodation/>}
+                              path={'/accommodation/:id'}
+                              element={<Accommodation />}
                         ></Route>
-                        <Route path="/about" element={<About/>}></Route>
-                        <Route path="*" element={<Error/>}></Route>
+                        <Route path="/about" element={<About />}></Route>
+                        <Route path="*" element={<Error />}></Route>
                   </Routes>
                   <Footer />
             </BrowserRouter>

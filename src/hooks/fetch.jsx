@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 
+/* Mise en place d'une fonction fetch générique */
+
 export function useFetch(url) {
       const [data, setData] = useState(null)
       const [error, setError] = useState(false)

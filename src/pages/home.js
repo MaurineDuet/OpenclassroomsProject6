@@ -4,6 +4,8 @@ import Banner from '../components/banner'
 import Card from '../components/card'
 import { useFetch } from '../hooks/fetch'
 
+/* Fetch du json correspondant aux appartements et affichages selon les réponses du server */
+
 function Home() {
       const { data, error } = useFetch('/logements.json')
       const locationsList = data
@@ -16,7 +18,8 @@ function Home() {
             <div className="container">
                   <Banner
                         title="Chez vous, partout et ailleurs"
-                        backgroundImage="./background.jpg"/>
+                        backgroundImage="./background.jpg"
+                  />
 
                   <section className="kasa-main-content">
                         {locationsList?.map((house, index) => (

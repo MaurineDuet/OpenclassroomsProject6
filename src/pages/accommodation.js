@@ -9,10 +9,11 @@ import { useFetch } from '../hooks/fetch'
 import { useParams } from 'react-router-dom'
 import Error from './error'
 
+/* Fetch du json correspondant aux appartements et affichages selon les réponses du server */
+
 function Accommodation() {
       const { id } = useParams()
       const { data, error } = useFetch('/logements.json')
-      // console.log(data)
 
       if (error) {
             return <span>Il y a un problème</span>
@@ -22,16 +23,11 @@ function Accommodation() {
             return <span>Chargement en cours...</span>
       }
 
-      // Use the == operator to perform a more relaxed equality check
       // eslint-disable-next-line
       const selectedHome = data.find((obj) => obj.id == id)
 
-      // Log some helpful information for troubleshooting
-      // console.log('id:', id)
-      // console.log('selectedHome:', selectedHome)
-
       if (!selectedHome) {
-            return <Error/>
+            return <Error />
       }
 
       return (
@@ -47,7 +43,12 @@ function Accommodation() {
                                     </div>
 
                                     <div className="acc-host">
-                                          <p>{selectedHome.host.name.split(' ').join('\n')}</p>
+                                          
+                                          <p>
+                                                {selectedHome.host.name
+                                                      .split(' ')
+                                                      .join('\n')}
+                                          </p>
                                           <img
                                                 src={selectedHome.host.picture}
                                                 alt="Host_picture"
@@ -92,41 +93,3 @@ function Accommodation() {
 }
 
 export default Accommodation
-
-/* <ul>
-                              {selectedHome.pictures.map((picture, index) => (
-                                    <li key={index}>
-                                          <img src={picture} alt=''/>
-                                    </li>
-                              ))}
-                        </ul> */
-
-// return (
-//       <div className="container">
-//             {data?.map((apartment, index) => (
-//                   <div key={apartment.id}>
-//                         <Slider pictures={apartment.pictures} />
-
-//                         <div className="collapsible-container-acc">
-//                               <Collapsible label="Description">
-//                                     <p className="collapsible-p">
-//                                           {apartment.description}
-//                                     </p>
-//                               </Collapsible>
-//                               <Collapsible label="Equipements">
-//                                     <ul>
-//                                           {apartment.equipments.map(
-//                                                 (equipment, index) => (
-//                                                       <li key={index}>
-//                                                             {equipment}
-//                                                       </li>
-//                                                 )
-//                                           )}
-//                                     </ul>
-//                               </Collapsible>
-//                         </div>
-//                   </div>
-//             ))}
-//       </div>
-// )
-// }
